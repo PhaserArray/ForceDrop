@@ -58,7 +58,7 @@ namespace ForceDrop
                         {
                             var count = player.Inventory.getItemCount(page);
 
-                            for (byte index = 0; index < count; index++)
+                            for (byte index = count; index --> 0;)
                             {
                                 foreach (var number in Configuration.Instance.WhiteListedFromDrop)
                                 {
@@ -83,7 +83,7 @@ namespace ForceDrop
                         {
                             var count = player.Inventory.getItemCount(page);
 
-                            for (byte index = 0; index < count; index++)
+                            for (byte index = count; index --> 0;)
                             {
                                 if (player.Inventory.getItem(page, index).item.id == ushort.Parse(command[1].ToString()))
                                 {
@@ -105,7 +105,7 @@ namespace ForceDrop
                     {
                         var count = player.Inventory.getItemCount(page);
 
-                        for (byte index = 0; index < count; index++)
+                        for (byte index = count; index --> 0;)
                         {
                             foreach (var number in Configuration.Instance.WhiteListedFromDrop)
                             {
@@ -130,7 +130,7 @@ namespace ForceDrop
                     {
                         var count = player.Inventory.getItemCount(page);
 
-                        for (byte index = 0; index < count; index++)
+                        for (byte index = count; index --> 0;)
                         {
                             if (player.Inventory.getItem(page, index).item.id == ushort.Parse(command[1].ToString()))
                             {
